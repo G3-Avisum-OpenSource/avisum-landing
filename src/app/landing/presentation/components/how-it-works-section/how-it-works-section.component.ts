@@ -1,5 +1,4 @@
 import { ChangeDetectionStrategy, Component, Input, signal } from '@angular/core';
-
 import { ProcessStep } from '../../../domain/models/process-step.model';
 import { ScrollRevealDirective } from '../../directives/scroll-reveal.directive';
 
