@@ -44,12 +44,12 @@ export class InMemoryLandingContentRepository implements LandingContentRepositor
           text: 'Toda la flota en un solo tablero: desvíos, paradas no programadas y zonas de riesgo marcadas. El operador ve lo que el conductor no alcanza a decir.',
           danger: false,
         },
-        {
-          icon: 'satellite',
-          title: 'Seguimiento GPS de la flota',
-          text: 'Toda la flota en un solo tablero: desvíos, paradas no programadas y zonas de riesgo marcadas. El operador ve lo que el conductor no alcanza a decir.',
-          danger: false,
-        },
+          {
+    icon: 'calendar',
+    title: 'Gestión de turnos y asignaciones',
+    text: 'Organiza los turnos de los conductores y asigna cada unidad según la programación establecida, manteniendo un registro actualizado de la operación.',
+    danger: false,
+          },
         {
           icon: 'users',
           title: 'Conteo de pasajeros',
