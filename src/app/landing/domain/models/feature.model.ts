@@ -1,4 +1,11 @@
-export type IconName = 'fingerprint' | 'siren' | 'satellite' | 'users' | 'bell' | 'headset';
+export type IconName =
+  | 'fingerprint'
+  | 'siren'
+  | 'satellite'
+  | 'users'
+  | 'bell'
+  | 'headset'
+  | 'calendar';
 
 export interface Feature {
   readonly icon: IconName;
