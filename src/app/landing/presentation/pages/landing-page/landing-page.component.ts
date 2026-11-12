@@ -8,7 +8,7 @@ import { FeaturesSectionComponent } from '../../components/features-section/feat
 import { HowItWorksSectionComponent } from '../../components/how-it-works-section/how-it-works-section.component';
 import { FinalCtaSectionComponent } from '../../components/final-cta-section/final-cta-section.component';
 import { FooterComponent } from '../../components/footer/footer.component';
-
+import { ShowcaseSectionComponent } from '../../components/showcase-section/showcase-section.component';
 @Component({
   selector: 'app-landing-page',
   standalone: true,
@@ -18,6 +18,7 @@ import { FooterComponent } from '../../components/footer/footer.component';
     StatsSectionComponent,
     FeaturesSectionComponent,
     HowItWorksSectionComponent,
+    ShowcaseSectionComponent,
     FinalCtaSectionComponent,
     FooterComponent,
   ],

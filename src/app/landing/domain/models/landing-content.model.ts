@@ -3,7 +3,7 @@ import { MonitorMetric } from './monitor-metric.model';
 import { NavItem } from './nav-item.model';
 import { ProcessStep } from './process-step.model';
 import { Stat } from './stat.model';
-
+import { Showcase } from './showcase.model';
 /**
  * Raíz agregada del contenido de la landing page de Avisum.
  * Representa toda la información de negocio que necesita la página
@@ -15,5 +15,7 @@ export interface LandingContent {
   readonly features: readonly Feature[];
   readonly steps: readonly ProcessStep[];
   readonly monitorMetrics: readonly MonitorMetric[];
+  readonly demo: Showcase;
+  readonly gallery: Showcase;
   readonly contactEmail: string;
 }

@@ -18,6 +18,8 @@ export class InMemoryLandingContentRepository implements LandingContentRepositor
         { label: 'Características', href: '#caracteristicas' },
         { label: 'Cómo Funciona', href: '#como-funciona' },
         { label: 'Estadística', href: '#estadistica' },
+        { label: 'Demo', href: '#demo' },
+        { label: 'Galería', href: '#galeria' },
         { label: 'Apoyo', href: '#apoyo' },
       ],
       stats: [
@@ -62,7 +64,6 @@ export class InMemoryLandingContentRepository implements LandingContentRepositor
           text: 'Notificaciones proactivas ante desvíos de ruta, exceso de velocidad o ingreso a zonas de alto riesgo, antes de que se conviertan en un problema.',
           danger: false,
         },
-
       ],
       steps: [
         {
@@ -91,6 +92,57 @@ export class InMemoryLandingContentRepository implements LandingContentRepositor
         { label: 'Alertas hoy', value: '3' },
         { label: 'Respuesta', value: '41 s' },
       ],
+      demo: {
+        id: 'demo',
+        heading: {
+          eyebrow: 'Demo',
+          titleTop: 'About the',
+          titleAccent: 'Product',
+          description:
+            'Una vista directa de Avisum en acción: monitoreo, alertas y control operativo para rutas más seguras.',
+        },
+        slides: [
+          {
+            kind: 'youtube',
+            src: 'https://www.youtube.com/watch?v=PEGA_AQUI_TU_LINK_PRODUCT',
+            caption: 'Product',
+          },
+          {
+            kind: 'youtube',
+            src: 'https://www.youtube.com/watch?v=PEGA_AQUI_TU_LINK_TEAM',
+            caption: 'Team',
+            heading: {
+              eyebrow: 'Equipo',
+              titleTop: 'About the',
+              titleAccent: 'Team',
+              description:
+                'Conoce al equipo detrás de Avisum y la visión que impulsa una operación de transporte más segura.',
+            },
+          },
+        ],
+      },
+      gallery: {
+        id: 'galeria',
+        heading: {
+          eyebrow: 'Interfaz',
+          titleTop: 'Product',
+          titleAccent: 'Gallery',
+          description:
+            'Pantallas clave para entender cómo se visualiza la operación diaria de Avisum.',
+        },
+        slides: [
+          { kind: 'image', src: 'images/gallery/admin5.png', caption: 'Shift History' },
+          { kind: 'image', src: 'images/gallery/admin1.png', caption: 'Control Center' },
+          { kind: 'image', src: 'images/gallery/admin2.png', caption: 'Driver Management' },
+          { kind: 'image', src: 'images/gallery/admin3.png', caption: 'Unit Assignment' },
+          { kind: 'image', src: 'images/gallery/admin4.png', caption: 'Notifications' },
+          { kind: 'image', src: 'images/gallery/conductor5.png', caption: 'Driver App · 5' },
+          { kind: 'image', src: 'images/gallery/conductor1.png', caption: 'Driver App · 1' },
+          { kind: 'image', src: 'images/gallery/conductor2.png', caption: 'Driver App · 2' },
+          { kind: 'image', src: 'images/gallery/conductor3.png', caption: 'Driver App · 3' },
+          { kind: 'image', src: 'images/gallery/conductor4.png', caption: 'Driver App · 4' },
+        ],
+      },
     };
   }
 }

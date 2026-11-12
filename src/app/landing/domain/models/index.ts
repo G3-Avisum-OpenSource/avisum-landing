@@ -4,3 +4,4 @@ export * from './feature.model';
 export * from './process-step.model';
 export * from './monitor-metric.model';
 export * from './landing-content.model';
+export * from './showcase.model';

@@ -12,7 +12,9 @@ export type IconType =
   | 'radio'
   | 'bus'
   | 'shield-check'
-  | 'calendar';
+  | 'calendar'
+  | 'chevron-left'
+  | 'chevron-right';
 
 @Component({
   selector: 'app-icon',
@@ -134,6 +136,14 @@ export type IconType =
           <path d="M14 14h2" />
           <path d="M8 18h2" />
           <path d="M14 18h2" />
+        }
+
+        @case ('chevron-left') {
+          <path d="m15 18-6-6 6-6" />
+        }
+
+        @case ('chevron-right') {
+          <path d="m9 18 6-6-6-6" />
         }
       }
     </svg>

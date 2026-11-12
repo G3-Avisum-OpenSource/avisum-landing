@@ -1,0 +1,108 @@
+<section [attr.id]="showcase.id" class="relative py-24">
+  <div class="mx-auto max-w-7xl px-6">
+    <div appScrollReveal>
+      <p class="font-display flex items-center gap-3 text-xs tracking-[0.3em] text-primary">
+        <span class="h-px w-10 bg-primary"></span>
+        {{ heading.eyebrow }}
+      </p>
+      <h2 class="font-display mt-4 text-5xl sm:text-6xl lg:text-7xl">
+        <span class="block text-foreground">{{ heading.titleTop }}</span>
+        <span class="block text-primary">{{ heading.titleAccent }}</span>
+      </h2>
+      <p class="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground">
+        {{ heading.description }}
+      </p>
+    </div>
+
+    <div
+      class="mt-12 grid grid-cols-[auto_1fr_auto] items-center gap-3 md:gap-6"
+      appScrollReveal
+      [scrollRevealDelay]="120"
+    >
+      <button
+        type="button"
+        (click)="prev()"
+        aria-label="Anterior"
+        class="flex size-10 items-center justify-center border border-border bg-card/60 text-primary transition-colors hover:border-primary hover:bg-primary hover:text-primary-foreground md:size-14"
+      >
+        <app-icon name="chevron-left" [size]="22" [strokeWidth]="2.5" />
+      </button>
+
+      <div class="border border-l-[3px] border-border border-l-primary bg-card/60">
+        <div class="relative aspect-video bg-black">
+          @switch (slide.kind) {
+            @case ('youtube') {
+              @if (playing()) {
+                <iframe
+                  class="absolute inset-0 size-full"
+                  [src]="embedUrl(slide.src)"
+                  [title]="slide.caption"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              } @else {
+                <button
+                  type="button"
+                  (click)="play()"
+                  [attr.aria-label]="'Reproducir ' + slide.caption"
+                  class="group absolute inset-0 size-full"
+                >
+                  <img
+                    class="size-full object-cover"
+                    [src]="thumbUrl(slide.src)"
+                    alt=""
+                    (error)="onThumbError($event, slide.src)"
+                  />
+                  <span class="absolute inset-0 bg-black/40 transition-colors group-hover:bg-black/20"></span>
+                  <span
+                    class="cut-corner absolute left-1/2 top-1/2 flex size-20 -translate-x-1/2 -translate-y-1/2 items-center justify-center bg-primary text-primary-foreground transition-transform group-hover:scale-110"
+                  >
+                    <svg viewBox="0 0 24 24" class="size-9" fill="currentColor" aria-hidden="true">
+                      <path d="M8 5v14l11-7z" />
+                    </svg>
+                  </span>
+                </button>
+              }
+            }
+            @case ('video') {
+              <video
+                class="absolute inset-0 size-full object-contain"
+                [src]="slide.src"
+                [poster]="slide.poster ?? ''"
+                controls
+                playsinline
+                preload="metadata"
+              >
+                Tu navegador no soporta video HTML5.
+              </video>
+            }
+            @case ('image') {
+              <img
+                class="absolute inset-0 size-full object-contain"
+                [src]="slide.src"
+                [alt]="slide.caption"
+              />
+            }
+          }
+        </div>
+
+        <div class="flex items-center justify-between border-t border-border px-4 py-3">
+          <span class="font-display text-lg tracking-wide text-foreground">{{ slide.caption }}</span>
+          <span class="font-display text-lg tracking-widest text-primary">
+            {{ index() + 1 }}/{{ showcase.slides.length }}
+          </span>
+        </div>
+      </div>
+
+      <button
+        type="button"
+        (click)="next()"
+        aria-label="Siguiente"
+        class="flex size-10 items-center justify-center border border-border bg-card/60 text-primary transition-colors hover:border-primary hover:bg-primary hover:text-primary-foreground md:size-14"
+      >
+        <app-icon name="chevron-right" [size]="22" [strokeWidth]="2.5" />
+      </button>
+    </div>
+  </div>
+</section>
