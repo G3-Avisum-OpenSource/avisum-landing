@@ -104,12 +104,14 @@ export class InMemoryLandingContentRepository implements LandingContentRepositor
         slides: [
           {
             kind: 'youtube',
-            src: 'https://www.youtube.com/watch?v=PEGA_AQUI_TU_LINK_PRODUCT',
+            src: 'https://youtu.be/rADjaCGj6Uk',
+            poster: 'images/gallery/admin1.png',
             caption: 'Product',
           },
           {
             kind: 'youtube',
             src: 'https://www.youtube.com/watch?v=PEGA_AQUI_TU_LINK_TEAM',
+            poster: 'images/gallery/admin1.png',
             caption: 'Team',
             heading: {
               eyebrow: 'Equipo',
