@@ -110,8 +110,8 @@ export class InMemoryLandingContentRepository implements LandingContentRepositor
           },
           {
             kind: 'youtube',
-            src: 'https://www.youtube.com/watch?v=PEGA_AQUI_TU_LINK_TEAM',
-            poster: 'images/gallery/admin1.png',
+            src: 'https://youtu.be/KybbnUUky4c',
+            poster: 'images/gallery/portada_abouthTeam.png',
             caption: 'Team',
             heading: {
               eyebrow: 'Equipo',
